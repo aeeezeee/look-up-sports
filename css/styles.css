@@ -1,0 +1,45 @@
+:root {
+    --text_font: Verdana, arial, sans-serif;
+}
+
+body{
+    padding:0;
+    margin:0;
+}
+
+#navbar {
+    display:grid;
+    grid-template-columns: repeat(8, 1fr);
+    background-color: rgb(121, 220, 238);
+    height: 3rem;
+    width: 100%;
+}
+
+#seasub {
+    height: 100%;
+    width: 100%;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+#search {
+    position: relative;
+    top: 0.3rem;
+    font-size: 16px;
+    height: 2rem;
+    width: 12rem;
+    float: left;
+    background-color: whitesmoke;
+    border: none;
+}
+
+#submit {
+    position: relative;
+    top: 0.3rem;
+    left: 0px;
+    width: 2.3rem;
+    height: 2.15rem;
+    float: left;
+    background-color: whitesmoke;
+    border: none;
+}
