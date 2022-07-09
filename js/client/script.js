@@ -82,7 +82,7 @@ function match(){
         let grandchild = childs[i].childNodes;
         if(!boyer(text_to_search, grandchild[0].innerHTML.toLowerCase(), bm_table) 
         && !boyer(text_to_search, grandchild[1].innerHTML.toLowerCase(), bm_table)){
-            matched.push(childs[i]);
+            not_matched.push(childs[i]);
         }
     }
     for(let i = 0; i < not_matched.length; i++){
