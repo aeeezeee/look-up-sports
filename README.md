@@ -24,7 +24,7 @@ A web application that connect sports enthusiast and sports host to have a healt
 ### Tech stack:
 * HTML/XHTML 
 * CSS/CSS Bootstrap 
-* Vanilla JavaScrip
+* Vanilla JavaScript
 * DOM/jQuery
 * XMLHttpRequest/AJAX
 * JSON
@@ -34,8 +34,7 @@ A web application that connect sports enthusiast and sports host to have a healt
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* A laptop for a web browser(Chrome, Firefox, etc.)
 
 ### Installing
 
@@ -61,6 +60,9 @@ Contributors names and contact info
 
 Aidil Zamri
 aeeezeee.code@gmail.com
+
+Ching Chun Liu
+liuchingchun96@gmail.com
 
 ## Version History
 
