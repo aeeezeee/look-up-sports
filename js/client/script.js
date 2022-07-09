@@ -6,8 +6,7 @@ const add = document.getElementById("add");
 const search_submit = document.getElementById("search_submit");
 const search = document.getElementById("search");
 let displayed = false;
-let category = {"soccer":"soccer", "badminton":"badminton", "basketball":"basketball"};
-let events = [];
+let not_matched = [];
 
 add.addEventListener("click", function(){
     if(displayed == false){
@@ -81,11 +80,15 @@ function match(){
 
     for(let i = 0; i < childs.length; i++){
         let grandchild = childs[i].childNodes;
-        console.log(boyer(text_to_search, grandchild[0].innerHTML.toLowerCase(), bm_table));
-        console.log(boyer(text_to_search, grandchild[1].innerHTML.toLowerCase(), bm_table))
-
+        if(!boyer(text_to_search, grandchild[0].innerHTML.toLowerCase(), bm_table) 
+        && !boyer(text_to_search, grandchild[1].innerHTML.toLowerCase(), bm_table)){
+            matched.push(childs[i]);
+        }
     }
-
+    for(let i = 0; i < not_matched.length; i++){
+        main_body.removeChild(not_matched[i]);
+    }
+    not_matched = [];
     search.value = "";
 }
 
