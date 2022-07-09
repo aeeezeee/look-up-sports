@@ -44,14 +44,50 @@ function add_item(){
     displayed = false;
 }
 
-function find(){
+function boyer(target ,paragraph, bm_table){
+    let found = false;
+    let skips = 0;
+    for(let i = 0; i <= paragraph.length - target.length; i += skips){
+        skips = 0;
+        for(let j = target.length-1; j >= 0; j--){
+            if(paragraph[i+j] != target[j]){
+                if(bm_table[paragraph[i+j]] != null){
+                    skips = bm_table[paragraph[i+j]];
+                    break;
+                }
+                else{
+                    skips = bm_table["*"];
+                    break;
+                }
+            }
+        }
+        if(skips == 0){
+            found = true;
+            break;
+        }
+    }
+    return found;
+}
+
+function match(){
+    let bm_table = {};
+
     const childs = main_body.childNodes;
+    const text_to_search = search.value.toLowerCase();
+    for(let i = 0; i < text_to_search.length; i++){
+        bm_table[text_to_search[i]] = Math.max(1, text_to_search.length - i - 1);
+    }
+    bm_table["*"] = text_to_search.length;
+
     for(let i = 0; i < childs.length; i++){
         let grandchild = childs[i].childNodes;
-        console.log(grandchild[0].innerHTML);
-        console.log(grandchild[1].innerHTML);
+        console.log(boyer(text_to_search, grandchild[0].innerHTML.toLowerCase(), bm_table));
+        console.log(boyer(text_to_search, grandchild[1].innerHTML.toLowerCase(), bm_table))
+
     }
+
+    search.value = "";
 }
 
 form_submit.addEventListener("click", add_item);
-search_submit.addEventListener("click", find);
+search_submit.addEventListener("click", match);
