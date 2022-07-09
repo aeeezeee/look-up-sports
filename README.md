@@ -7,7 +7,7 @@ A Web Application for sports enthusiast and sports host to connect and have a he
 ### Case problem:
 On a Friday evening, user was suppose to play futsal at Mt. Lawley, Western Australia, for a drop in session but the session was cancelled last minute by the 
 host due to short of staff. User had travelled two hours from place of stay to the futsal location. The trip was worthless since user's intention was to play 
-futsal. User tried looking for other futsal drop in session but could not find one.
+futsal. User tried looking for other futsal drop in session but could not find alternative.
 
 ### Case solution:
 A web application that connect sports enthusiast and sports host to have a healthy lifestyle.
