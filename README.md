@@ -29,6 +29,7 @@ A web application that connect sports enthusiast and sports host to have a healt
 * XMLHttpRequest/AJAX
 * JSON
 * NodeJS
+* PostgreSQL
 
 ## Getting Started
 
@@ -61,8 +62,6 @@ Contributors names and contact info
 Aidil Zamri
 aeeezeee.code@gmail.com
 
-Ching Chun Liu
-liuchingchun96@gmail.com
 
 ## Version History
 
@@ -70,7 +69,7 @@ No version at the moment
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the MIT License - see the LICENSE.md file for details
 
 ## Acknowledgments
 
